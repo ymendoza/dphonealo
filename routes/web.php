@@ -11,4 +11,4 @@
 |
 */
 
-Route::get('/', 'FrontendController@index');
+Route::get('/', 'frontend\FrontendController@index');
