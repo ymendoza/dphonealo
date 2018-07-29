@@ -5,6 +5,8 @@
         <title>@yield('title')</title>
         <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}" >
         <link rel="stylesheet" href="{{asset('css/styles.css')}}" >
+        <link rel="stylesheet" href="{{asset('css/cs-select.css')}}" >
+        <link rel="stylesheet" href="{{asset('css/cs-skin-overlay.css')}}" >
         <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700' rel='stylesheet' type='text/css'>
         <meta name="description" content="">
@@ -12,208 +14,47 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     </head>
-<body>
+<body style="width: 100%;">
 
-    <!--Masthead-->
-    <div  class="row-masthead" class="parallax-window" data-parallax="scroll" data-image-src="{{asset('assets/masthead.jpg')}}">
-        {{-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleSlidesOnly" data-slide-to="1"></li>
-                <li data-target="#carouselExampleSlidesOnly" data-slide-to="2"></li>
-            </ol>
+ <div id="banner_principal" class="principal">
+        
+        <div class=" col-xs-12 col-sm-4 logo">
+            <img src="assets/logo.svg" class=" img-fluid"/>
+        </div>
+
+         <div id="carouselExampleSlidesOnly" class="carousel slide row-masthead" data-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img class="d-block w-100" src="{{asset('assets/fullimage.jpg')}}" alt="First slide">
+                <div class="carousel-item active" >
+                  <img class="d-block w-100" src="{{asset('assets/masthead.jpg')}}" alt="First slide">
                 </div>
                 <div class="carousel-item">
-                  <img class="d-block w-100" src="{{asset('assets/image01.jpg')}}" alt="Second slide">
+                  <img class="d-block w-100" src="{{asset('assets/masthead.jpg')}}" alt="Second slide">
                 </div>
                 <div class="carousel-item">
-                  <img class="d-block w-100" src="{{asset('assets/image02.jpg')}}" alt="Third slide">
+                  <img class="d-block w-100" src="{{asset('assets/masthead.jpg')}}" alt="Third slide">
                 </div>
             </div>
-        </div> --}}
+        </div>
+
         <div class="container">
-            <div class="row">
-              <div class="col-md-4">
-                  <img src="{{asset('assets/logo.svg')}}" class="logo img-fluid" />
-              </div>
-              <div class="col-md-6"></div>
-            </div>
-            <div class="row">
-                <div class="col-md-8 col-sm-12 col-lg-6 masthead-text">
+            <div class="row pt-md-5 pt-xs-0">
+                <div class=" col-xs-12 col-sm-8 col-lg-6">
                     
                 </div>
-                <div class="col-md-4 hidden-sm-down">
+                <div class="col-sm-4 invisible-xs">
                     <img src="{{asset('assets/iPhone.png')}}" class="iPhone"/>
                 </div>
             </div>
         </div>
+       
+    </div>
+    <div class="pt-xs-1 pt-5 bg-white">
+        
+            @yield('content')
+        
     </div>
 
-    <!--Two Col-->
-    <div class="container">
-    <div class="row">
-        <!--Left Col-->
-        <div class="col-md-6">
-          <h2>RECARGA TU</h2>
-            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.</p>
-        </div>
-        <!--Right Col-->
-        <div class="col-md-6">
-            <h2>Pixel Perfect</h2>
-            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt utadipisicing elit</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </div>
-    </div>
-    </div>
-
-    <!--Grid Row-->
-    <div class="row-grid hidden-md-down">
-        <div class="container container-full">
-            <div class="row">
-                <div class="grid col-md-4 pink">
-                    <h2>Design Quality</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
-                    <br/>
-                    <a href="#">Find Out More →</a>
-                </div>
-                <div class="grid col-md-4 purple">
-                    <h2>Design Quality</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
-                    <br/>
-                    <a href="#">Find Out More →</a>
-                </div>
-                <div class="grid col-md-4 image01">
-                    <h2>Design Quality</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
-                    <br/>
-                    <a href="#">Find Out More →</a>
-                </div>
-                <div class="grid col-md-4 light-purple">
-                    <h2>Design Quality</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
-                    <br/>
-                    <a href="#">Find Out More →</a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="grid col-md-8 image02">
-                    <h2>Design Quality</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
-                    <br/>
-                    <a href="#">Find Out More →</a>
-                </div>
-                <div class="grid col-md-4 green">
-                    <h2>Design Quality</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
-                    <br/>
-                    <a href="#">Find Out More →</a>
-                </div>
-                <div class="grid col-md-4 image01">
-                    <h2>Design Quality</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
-                    <br/>
-                    <a href="#">Find Out More →</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--Four Col-->
-    <div class="container">
-        <div class="row">
-            <div class="verticle-text">talkapp.com</div>
-            <div class="col-md-12">
-                <h2>A look at the detail</h2>
-            </div>
-            <div class="col-md-6 col-sm-6 col-lg-3">
-                <h3>Web based</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-            </div>
-            <div class="col-md-6 col-sm-6 col-lg-3">
-                <h3>Performance</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-            </div>
-            <div class="col-md-6 col-sm-6 col-lg-3">
-                <h3>Community</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-            </div>
-            <div class="col-md-6 col-sm-6 col-lg-3">
-                <h3>Cultral</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-            </div>
-        </div>
-        <div class="row-spacer"></div>
-    </div>
-
-    <!--Full Width Image-->
-    <div class="row-full-image" class="parallax-window" data-parallax="scroll" data-image-src="assets/fullimage.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-5 col-lg-5 col-sm-12 masthead-text">
-                    <h1>More power behind every pixel.</h1>
-                    <p class="sub-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <a href="#">Buying Options →</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--Green Row-->
-    <div class="row-green">
-        <div class="container">
-            <div class="row">
-                <div class="verticle-text white">talkapp.com</div>
-                <div class="col-md-12">
-                    <h2>Reasons to get onboard</h2>
-                </div>
-                <div class="col-md-4">
-                    <h3>Web based</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                </div>
-                <div class="col-md-4">
-                    <h3>Open Source</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                </div>
-                <div class="col-md-4">
-                    <h3>Community</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--Buying Row-->
-    <div class="row-buying">
-        <div class="container">
-            <div class="row">
-                <div class="verticle-text white">talkapp.com</div>
-                <div class="col-md-6 inactive">
-                    <span class="badge">Legacy</span>
-                    <h2>Go it Solo</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-                    <a href="#" class="btn-green">Buy Now $12</a>
-                    <img src="assets/fa-apple.svg" class="icon"/>
-                    <img src="assets/fa-windows.svg"/>
-                </div>
-                <div class="col-md-6 active">
-                    <span class="badge purple">Most Popular</span>
-                    <h2>Team Plan</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-                    <a href="#" class="btn-green">Buy Now $18</a>
-                    <img src="assets/fa-apple.svg" class="icon"/>
-                    <img src="assets/fa-windows.svg"/>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--Footer Row-->
+     <!--Footer Row-->
     <div class="row-footer">
         <div class="container">
             <div class="row">
@@ -270,11 +111,17 @@ the shit out of you’r inbox</label>
     </div>
 
 
+
 <!--Scripts-->
 <script src="{{asset('js/jquery.min.js')}}"></script>
+<script src="{{asset('js/classie.js')}}"></script>
+<script src="{{asset('js/selectFx.js')}}"></script>
+
     <script src="{{asset('js/parallax.min.js')}}"></script>
     <script src="{{asset('js/bootstrap.js')}}"></script>
+
 <script>
+ 
     (function($){
 
         $(document).ready(function(){
@@ -310,7 +157,7 @@ the shit out of you’r inbox</label>
 
     })(jQuery);
 
-    $('.carousel').carousel()
+     
 </script>
 @stack('scripts') 
 
