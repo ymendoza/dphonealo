@@ -45,7 +45,7 @@
 		extend( this.options, options );
 		this._init();
 
-		console.log($(this).val());
+		//console.log($(this).val());
 	}
 
 	/**
@@ -102,6 +102,7 @@
 	 */
 	SelectFx.prototype._createSelectEl = function() {
 		var self = this, options = '', createOptionHTML = function(el) {
+
 			var optclass = '', classes = '', link = '';
 
 			if( el.selectedOpt && !this.foundSelected && !this.hasDefaultPlaceholder ) {
@@ -268,43 +269,64 @@
 	/**
 	 * change option - the new value is set
 	 */
-	SelectFx.prototype._changeOption = function() {
-		// if pre selected current (if we navigate with the keyboard)...
-		if( typeof this.preSelCurrent != 'undefined' && this.preSelCurrent !== -1 ) {
-			this.current = this.preSelCurrent;
-			this.preSelCurrent = -1;
-		}
+	// SelectFx.prototype._changeOption = function() {
 
-		// current option
-		var opt = this.selOpts[ this.current ];
+	// 	// if pre selected current (if we navigate with the keyboard)...
+	// 	if( typeof this.preSelCurrent != 'undefined' && this.preSelCurrent !== -1 ) {
+	// 		this.current = this.preSelCurrent;
+	// 		this.preSelCurrent = -1;
+	// 	}
 
-		// update current selected value
-		this.selPlaceholder.textContent = opt.textContent;
+	// 	// current option
+	// 	var opt = this.selOpts[ this.current ];
+
+	// 	// update current selected value
+	// 	this.selPlaceholder.textContent = opt.textContent;
 		
-		// change native select element´s value
-		this.el.value = opt.getAttribute( 'data-value' );
+	// 	// change native select element´s value
+	// 	this.el.value = opt.getAttribute( 'data-value' );
 
-		// remove class cs-selected from old selected option and add it to current selected option
-		var oldOpt = this.selEl.querySelector( 'li.cs-selected' );
-		if( oldOpt ) {
-			classie.remove( oldOpt, 'cs-selected' );
-		}
-		classie.add( opt, 'cs-selected' );
+	// 	// remove class cs-selected from old selected option and add it to current selected option
+	// 	var oldOpt = this.selEl.querySelector( 'li.cs-selected' );
+	// 	if( oldOpt ) {
+	// 		classie.remove( oldOpt, 'cs-selected' );
+	// 	}
+	// 	classie.add( opt, 'cs-selected' );
 
-		// if there´s a link defined
-		if( opt.getAttribute( 'data-link' ) ) {
-			// open in new tab?
-			if( this.options.newTab ) {
-				window.open( opt.getAttribute( 'data-link' ), '_blank' );
-			}
-			else {
-				window.location = opt.getAttribute( 'data-link' );
-			}
-		}
+	// 	// if there´s a link defined
+	// 	if( opt.getAttribute( 'data-link' ) ) {
+	// 		// open in new tab?
+	// 		if( this.options.newTab ) {
+	// 			window.open( opt.getAttribute( 'data-link' ), '_blank' );
+	// 		}
+	// 		else {
+	// 			window.location = opt.getAttribute( 'data-link' );
+	// 		}
+	// 	}
 
-		// callback
-		this.options.onChange( this.el.value );
-	}
+	// 	// callback
+	// 	this.options.onChange( this.el.value );
+
+	// 	var pais = this.el.value;
+		
+
+ // 			$.ajaxSetup({
+ //                headers: {
+ //                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+ //                }
+ //            });
+ //            $.ajax({
+ //                type: "GET",
+ //                url: '{{ url('oat/confirmar_ticket') }}',
+ //                dataType: "json",
+ //                data: { fecha: fecha ,_token: '{{csrf_token()}}' },
+ //                success: function (data){
+
+                		
+ //                }
+
+ //            });
+	// }
 
 	/**
 	 * returns true if select element is opened

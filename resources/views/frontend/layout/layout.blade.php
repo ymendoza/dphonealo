@@ -16,36 +16,73 @@
     </head>
 <body style="width: 100%;">
 
+
+                        <div id="tiendas" class="col-6 col-md-2 align-self-center  position-fixed " style="">
+                            <div class="row d-flex justify-content-center align-items-center ">
+                                <div class="col-6">
+                                    <a href="" title="">
+                                        <img src="{{ asset('assets/btn_googleplay.svg') }}" alt="" class="img-fluid">
+                                    </a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="" title="">
+                                        <img src="{{ asset('assets/btn_appstore.svg') }}" alt="" class="img-fluid">
+                                    </a>
+                                </div>
+                            </div> 
+                        </div>
+
  <div id="banner_principal" class="principal">
-        
-        <div class=" col-xs-12 col-sm-4 logo">
-            <img src="assets/logo.svg" class=" img-fluid"/>
+        <div class="col-12 pt-3 pb-3 pl-5 pr-5 p-0 background-white position-main" style=" z-index: 9999">
+            <div class="row d-flex justify-content-center justify-content-sm-between align-items-center">
+
+                <div class=" col-xs-12 col-sm-2 pl-5" >
+                    <img src="assets/logo.svg" class=" img-fluid"/>
+                </div>
+                <div class="col-xs-12">
+                    <a href="" title="">ES</a> | <a href="" title="">EN</a> 
+                </div> 
+            </div>
+            
         </div>
+        
 
          <div id="carouselExampleSlidesOnly" class="carousel slide row-masthead" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active" >
-                  <img class="d-block w-100" src="{{asset('assets/masthead.jpg')}}" alt="First slide">
+                  <div class="position-absolute col-md-6 p-5 ml-5 c-white background-black top-30 text-center invisible-xs">
+                      <h2 class="c-white">Descarga nuestra aplicación</h2>
+                      <h3 class="c-white normal">Nuestro compromiso siempre es conseguir la mejor calidad al mejor precio</h3>
+
+                  </div>  
+                  <img class="d-block w-100" src="{{asset('assets/usa.png')}}" alt="">
                 </div>
                 <div class="carousel-item">
-                  <img class="d-block w-100" src="{{asset('assets/masthead.jpg')}}" alt="Second slide">
+                    <div class="position-absolute col-md-6 p-5 ml-5 c-white background-black top-30 text-center invisible-xs">
+                        <h2 class="c-white">Llamadas internacionales</h2>  
+                        <h3 class="c-white normal" >Phonealo utiliza la tecnología más innovadora para que puedas llamar en el extranjero sin necesidad de datos o wifi.</h3>
+                    </div>
+                  <img class="d-block w-100" src="{{asset('assets/ecuador.jpg')}}" alt="">
                 </div>
                 <div class="carousel-item">
-                  <img class="d-block w-100" src="{{asset('assets/masthead.jpg')}}" alt="Third slide">
+                    <div class="position-absolute col-md-6 p-5 ml-5 c-white background-black top-30 text-center invisible-xs">
+                      <h2 class="c-white">Cuéntaselo todo</h2>
+                      <h3 class="c-white normal">Hasta el último detalle con la gente que te importa.</h3>
+                      <p class="c-white">Pruébala gratis</p>
+                       
+                  </div>
+                  <img class="d-block w-100" src="{{asset('assets/cuba.jpg')}}" alt="">
                 </div>
             </div>
         </div>
 
-        <div class="container">
-            <div class="row pt-md-5 pt-xs-0">
-                <div class=" col-xs-12 col-sm-8 col-lg-6">
-                    
+            
+              
+                <div class=" pt-md-5 pt-xs-0 d-flex flex-row-reverse">
+                    <img src="{{asset('assets/iPhone.png')}}" class="iPhone invisible-xs"/>
                 </div>
-                <div class="col-sm-4 invisible-xs">
-                    <img src="{{asset('assets/iPhone.png')}}" class="iPhone"/>
-                </div>
-            </div>
-        </div>
+           
+       
        
     </div>
     <div class="pt-xs-1 pt-5 bg-white">
@@ -59,7 +96,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h3>Get in touch</h3>
+                    2018 © Phonealo - ALL Rights Reserved.
+                  {{--   <h3>Get in touch</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                     <br/><br/>
                     <div class="row">
@@ -94,17 +132,17 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="row-spacer"></div>
+                    <div class="row-spacer"></div> --}}
                 </div>
                 <div class="col-md-5 col-md-offset-1 col-sm-6">
-                    <h3>Stay in touch</h3>
+                   {{--  <h3>Stay in touch</h3>
                     <input class="email" placeholder="Enter your email"/>
                     <button type="submit" class="submit">
                         <img src="assets/tick.svg"/>
                     </button>
 
                     <label class="label-text">We don’t send spam. Actually, who are we kiding, we’ll spam
-the shit out of you’r inbox</label>
+the shit out of you’r inbox</label> --}}
                 </div>
             </div>
         </div>
@@ -157,7 +195,17 @@ the shit out of you’r inbox</label>
 
     })(jQuery);
 
-     
+// $(window).scroll(function() {
+
+//     if ($(window).scrollTop() == 200) {
+//       $("#tiendas").fadeIn();//.fadeOut();
+//       $("#tiendas").removeClass("display-none");
+//     } 
+//     if($(window).scrollTop() == 0) {
+//       $("#tiendas").fadeOut();//.fadeIn();
+//       $("#scroll").addClass("display-none");
+//     }
+// });
 </script>
 @stack('scripts') 
 

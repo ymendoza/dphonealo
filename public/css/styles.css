@@ -329,14 +329,20 @@ input.email, textarea.mensaje {
 .height-250{
     height: 250px;
 }
+.height-150{
+    height: 150px;
+}
 .background-size{
     background-size: cover
 }
 .top{
-    top: 0px;
+    top: 70px;
 }
 .bold{
     font-weight: bold;
+}
+.normal{
+    font-weight: 100;
 }
 .size-burbuja{
     font-size: 2rem;
@@ -347,12 +353,138 @@ input.email, textarea.mensaje {
     opacity: .6;
 }
 
+.background-black{
+    background-color: rgba(0,0,0,.8);
+}
+
+.background-white{
+    background-color: rgba(255,255,255,.8);
+}
+
 .display-none{
     display: none;
 }
 
+.top-30{
+    top: 25%;
+}
+
+/* CONTAINERS */
+
+.four { 
+    width: 100%; 
+
+    height: auto !important;
+}
+
+
+.svg {
+    padding-top: 30px;
+    height: 150px !important;
+}
+
+
+
+/* CLEARFIX */
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+/* FORM */
+
+.form .plan input{
+    display: none;
+}
+
+.form label{
+    position: relative;
+    color: #fff;
+    border: 2px solid #C80000 !important ;
+    background-color: #fff;
+    font-size: 26px;
+    text-align: center;
+    height: 150px;
+    line-height: 150px;
+    display: block;
+    cursor: pointer;
+    border: 3px solid transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: black;
+}
+.form .plan input:checked + label > div > div > .svg path{
+    fill: white !important;
+}
+
+.form .plan input:checked + label > div > div > div > p{
+    color: black !important;
+}
+
+.form .plan input:checked + label{
+    border: 3px solid #fff;
+    background-color: #C80000;
+    color: white;
+  
+}
+
+.form .plan input:checked + label:after{
+    content: "\2713";
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    background-color: #C80000;
+    z-index: 999;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    color: white;
+}
+
+.tel{
+    font-size: 1.35em;
+    font-weight: 700;
+    color:#95948f;
+    box-shadow: 0 10px 0 -5px rgba(0,0,0,0.1);
+    border: none;
+    background: transparent;
+    padding: 1em;
+}
+input.tel:focus{
+    border: 0px !important;
+    outline: none;
+    box-shadow: 0 10px 0 -5px rgba(200,0,0,0.5);
+}
+
+.position-main{
+    position: fixed;
+}
+.position-fixed{
+    position: fixed;
+}
+#tiendas{
+    bottom: 30px; 
+    left: 10px; 
+    z-index: 9999
+}
 
 @media only screen and (max-width: 639px) {
+    .position-main{
+    position: absolute;
+}
     .principal{
         height: 250px;
     }
@@ -370,14 +502,20 @@ input.email, textarea.mensaje {
     .m-0{
         margin: 0px !important; 
     }
+    .p-0{
+        padding: 0px !important;
+    }
+    .pl-5{
+        padding: 1em !important;
+    }
     
     .size-burbuja{
-        font-size: 1rem;
+        font-size: 2rem;
         margin-bottom: 0px;
     }
 
     .w-80{
-        width: 65%;
+        width: 80%;
     }
 
     .title-h1{
@@ -397,7 +535,7 @@ input.email, textarea.mensaje {
         margin-bottom: 1em !important;
     }
     .top{
-        top: -4px;
+        top: 70px;
     }
     .invisible-xs {
       /*visibility: hidden;*/
@@ -409,13 +547,21 @@ input.email, textarea.mensaje {
     .pt-xs-1{
         padding-top: 1em !important;
     }
+    .background-white{
+        height: 200px;
+    }
     .cs-skin-overlay .cs-options > ul {
     
-    top: inherit !important;
-    left:  inherit !important;
-    width: inherit  !important;
-    -webkit-transform: inherit !important;
-    transform: inherit !important;
+        top: inherit !important;
+        left:  inherit !important;
+        width: inherit  !important;
+        -webkit-transform: inherit !important;
+        transform: inherit !important;
+    }
+    .tel{
+        margin-top: 1em;
+        margin-bottom: 1em;
+        font-size: 1em;
     }
 }
 
@@ -434,6 +580,13 @@ input.email, textarea.mensaje {
     width: inherit  !important;
     -webkit-transform: inherit !important;
     transform: inherit !important;
+    }
+    .size-burbuja{
+        font-size: 1rem;
+        margin-bottom: 0px;
+    }
+     .w-80{
+        width: 70%;
     }
 
 }
