@@ -30,11 +30,10 @@ class ContactoMail extends Mailable
     public function build(Request $request)
     {
         $email = $request['email'];
-        $vista = $request['vista'];
         $mensaje = $request['mensaje'];
 
-        return $this->from($email)
-                    ->view('mail.mailsend')
+        return $this->from('contact@phonealo.com')
+                    ->view('frontend.mail.mailsend')
                     ->with([
                             'email' => $email,
                             'mensaje' => $mensaje,

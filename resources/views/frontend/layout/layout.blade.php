@@ -77,6 +77,17 @@
     </div>
     {{--FIN MENU --}}
 
+     @if($notificacion=Session::get('notificacion'))
+        <div class="col-12 d-flex justify-content-center" style="position: absolute; top: 3%; z-index: 9999">
+            <div class=" col-12 col-md-6 alert alert-success alert-dismissible fade show" role="alert">
+              <strong>Envio Satisfactorio</strong> 
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+        </div>
+     @endif
+
     {{-- SLIDER --}}
     {{-- PARA ASEGURAR EL AJUSTE DE LA IMAGENES VERIFIQUE QUE LAS IMAGENES POSEAN LAS MISMAS DIMENCIONES 1920 × 1279/ PUEDE AYUDARSE EMPLEADO EL ARCHIVO .PSD QUE SE ENCUENTRA EN PUBLIC/ASSETS/IMG.PSD --}}
     <div id="carouselExampleSlidesOnly" class="carousel slide row-masthead" data-ride="carousel">
@@ -125,21 +136,31 @@
     <div class="row-footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-12 col-md-6">
                     2018 © Phonealo - ALL Rights Reserved.
                     <br>
                     B-Duc Mircea Cel Batran H5, Targoviste, Romania
                 </div>
-                <div class="col-md-5 col-md-offset-1 col-sm-6">
-                    <div class="row d-flex justify-content-end ">
+                <div class="col-12 mt-3-xs col-md-5 col-md-offset-1 col-sm-6">
+                    <div class="row d-flex justify-content-center justify-content-sm-end ">
                         <div class="col-2">
                             <a target="blank_" href="https://www.instagram.com/phonealo_app/" title="Instagram">
-                                <img src="{{ asset('assets/ig.svg') }}" alt="">
+                                <img src="{{ asset('assets/ig_circle.svg') }}" alt="">
                             </a>
                         </div>
                         <div class="col-2">
                             <a target="blank_" href="https://www.facebook.com/Phonealo-642900916095975/?modal=admin_todo_tour" title="Facebook">
-                                <img src="{{ asset('assets/fb.svg') }}" alt="">
+                                <img src="{{ asset('assets/fb_circle.svg') }}" alt="">
+                            </a>
+                        </div>
+                        <div class="col-2">
+                            <a target="blank_" href="#">
+                                <img src="{{ asset('assets/tw_circle.svg') }}" alt="@Phonealo1">
+                            </a>
+                        </div>
+                        <div class="col-2">
+                            <a target="blank_" href="#">
+                                <img src="{{ asset('assets/sk_circle.svg') }}" alt="">
                             </a>
                         </div>
                     </div>

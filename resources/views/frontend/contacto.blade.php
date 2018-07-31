@@ -4,25 +4,17 @@
             <div class="row">
                 <div class="col-md-6 active">
                     {{-- <span class="badge">Legacy</span> --}}
-                    @if($notificacion=Session::get('notificacion'))
-                        <div class="col-12">
-                            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                              <strong>Envio Satisfactorio</strong> 
-                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-                        </div>
-                     @endif
+                   
                     <h2 class="text-center">¡CONTACTA!</h2>
-                    <form action="contacto_submit" method="get" accept-charset="utf-8">
+                    <form action="{{route('contacto_submit')}}" method="post" accept-charset="utf-8">
+                        <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}">
                         <div class="form-group">
                             <label class="label-text" for="email">Email</label>
-                            <input type="email" class="col-md-12 form-control email" id="email" required placeholder="Ingresa tu Email">
+                            <input type="email" class="col-md-12 form-control email" id="email" name="email" required placeholder="Ingresa tu Email">
                         </div>
                         <div class="form-group">
-                            <label class="label-text" for="email">Mensaje</label>
-                            <textarea name="" class="form-control mensaje" rows="5"></textarea>
+                            <label class="label-text" for="mensaje">Mensaje</label>
+                            <textarea name="mensaje" class="form-control mensaje" id="mensaje" rows="5"></textarea>
                         </div>
                         <div class="form-group text-right">
                             
