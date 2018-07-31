@@ -110,7 +110,7 @@
             <div class="col-md-9 col-sm-12 col-lg-6">
             </div>
             <div class="col-md-2 d-md-block d-none">
-                <img src="assets/iPhone.png" class="iPhone"/>
+                <img src="assets/iPhone1.png" class="iPhone"/>
             </div>
         </div>
     </div>
