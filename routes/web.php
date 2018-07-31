@@ -11,4 +11,8 @@
 |
 */
 
-Route::get('/', 'FrontendController@index');
+Route::get('/', 'frontend\FrontendController@index');
+
+Route::post('recarga_submit', 'frontend\FrontendController@recarga');
+
+Route::get('tarifas', 'frontend\FrontendController@tarifas');
