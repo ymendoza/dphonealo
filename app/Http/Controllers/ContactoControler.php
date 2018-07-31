@@ -12,11 +12,13 @@ class ContactoControler extends Controller
 
         $email = $request['email'];
         $mensaje = $request['mensaje'];
+        $tel = $request['tel'];
 
 
         $data= [
 
                 "email"         => $email,
+                "tel"         => $tel,
                 'mensaje'       => $mensaje,
 
         ];

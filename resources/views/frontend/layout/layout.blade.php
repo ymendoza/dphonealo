@@ -90,7 +90,7 @@
 
     {{-- SLIDER --}}
     {{-- PARA ASEGURAR EL AJUSTE DE LA IMAGENES VERIFIQUE QUE LAS IMAGENES POSEAN LAS MISMAS DIMENCIONES 1920 × 1279/ PUEDE AYUDARSE EMPLEADO EL ARCHIVO .PSD QUE SE ENCUENTRA EN PUBLIC/ASSETS/IMG.PSD --}}
-    <div id="carouselExampleSlidesOnly" class="carousel slide row-masthead" data-ride="carousel">
+    <div id="carouselExampleSlidesOnly" class="carousel slide row-masthead col-12 p-0" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active" >
               <div class="position-absolute col-12 col-md-8 col-lg-6 p-5  p-1-sm ml-5 c-white background-black top-30 text-center invisible-xs">
