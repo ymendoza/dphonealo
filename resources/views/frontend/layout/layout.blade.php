@@ -159,7 +159,7 @@
                             </a>
                         </div>
                         <div class="col-2">
-                            <a target="blank_" href="#">
+                            <a target="blank_" href="skype:phonealo app">
                                 <img src="{{ asset('assets/sk_circle.svg') }}" alt="">
                             </a>
                         </div>
