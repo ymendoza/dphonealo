@@ -5,23 +5,24 @@
 @section ('content')
 	@include('frontend.recarga')
 
-	 <!--Full Width Image-->
+	  <!--Full Width Image-->
     <div class="parallax" style="background-image: url('assets/alemania.png');" >
         <div class="container padding-200">
-            <div class="row ">
-                <div class="col-md-6 col-lg-12 col-sm-12 masthead-text ">
+            <div class="row w-100">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-10  pl-2-xs">
                 	
-                    <h1>Conéctate con tus seres queridos</h1>
-                    <h2 class="">Nuestro compromiso siempre es conseguir la mejor calidad al mejor precio.</h2>
-                    {{-- <a href="#">Buying Options →</a> --}}
+                    <h1 class="title-h1">Conéctate con tus seres queridos</h1>
+                    <h2 class="c-white title-h2">Nuestro compromiso siempre es conseguir la mejor calidad al mejor precio.</h2>
+            
                 </div>
             </div>
         </div>
     </div>
-     <div class="row-green">
+
+   <div class="row-green">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-10  pl-2-xs">
                     <h2>¿Qué es Phonealo?</h2>
                     <h3>Es una aplicación para hacer llamadas a internacionales utilizando siempre las rutas de mejor calidad precio.</h3>
                 </div>
@@ -30,7 +31,7 @@
         </div>
     </div>
 
-    @include('frontend.contacto')
+     @include('frontend.contacto')
 @endsection
 
 @push('scripts')
