@@ -44,6 +44,12 @@
             &noscript=1”/>
         </noscript>
         <!-- End Facebook Pixel Code -->
+
+           <script type=“text/javascript”> //<![CDATA[ 
+        var tlJsHost = ((window.location.protocol == “https:“) ? “https://secure.comodo.com/” : “http://www.trustlogo.com/“);
+        document.write(unescape(“%3Cscript src=‘” + tlJsHost + “trustlogo/javascript/trustlogo.js’ type=‘text/javascript’%3E%3C/script%3E”));
+        //]]>
+        </script>
 </head>
 <body class="container-fluid " style="padding: 0px;">
     {{-- BOTONES DE TIENDAS --}}
@@ -172,6 +178,12 @@
     {{-- FIN FOOTER --}}
 
     <!--Scripts-->
+       <script language=“JavaScript” type=“text/javascript”>
+TrustLogo(“http://www.phonealo.com/comodo_secure_seal_76x26_transp.png
+http://www.phonealo.com/comodo_secure_seal_76x26_transp.png
+“, “CL1”, “none”);
+</script>
+<a  href=“https://www.positivessl.com/” id=“comodoTL”>Positive SSL</a>
     <script src="{{asset('js/jquery.min.js')}}"></script>
     <script src="{{asset('js/classie.js')}}"></script>
     <script src="{{asset('js/selectFx.js')}}"></script>
