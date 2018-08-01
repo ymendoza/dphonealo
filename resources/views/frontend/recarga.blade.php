@@ -8,7 +8,7 @@
           <div class="col-9 col-md-5 col-lg-4">
             <form action="https://app.phonealo.net/payment/init" method="get" accept-charset="utf-8">
             <select name="amount" class="input ">
-               <option value="">Seleccione el Monto</option>
+               <option value="">Seleccione el Importe</option>
                 <option value="5"><span class='moneda'></span>5 €</option>
                 <option value="10"><span class='moneda'></span>10 €</option>
                 <option value="20"><span class='moneda'></span>20 €</option>

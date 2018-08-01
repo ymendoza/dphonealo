@@ -3,28 +3,29 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Mail\ContcatoController;
+use App\Mail\ContactoMail;
 use Mail;
 
 class ContactoControler extends Controller
 {
-    public function ContactoControler(Request $request){
+    public function contacto(Request $request){
 
-    	$email = $request['email'];
-    	$mnsaje = $request['mensaje'];
+        $email = $request['email'];
+        $mensaje = $request['mensaje'];
+        $tel = $request['tel'];
 
 
-    	$data= [
+        $data= [
 
-    			"email" 		=> $email,
-    			'mensaje' 		=> $mensaje,
+                "email"         => $email,
+                "tel"         => $tel,
+                'mensaje'       => $mensaje,
 
-    	];
+        ];
 
-    
-    	 Mail::to($email)->send(new ContactoMail($data));
+         Mail::to('contact@phonealo.com')->send(new ContactoMail($data));
 
-    	 return view('frontend.index')->with("notificacion");
+         return redirect()->route('exito')->with("notificacion", 'Enviado');
 
     }
 }

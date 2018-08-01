@@ -44,6 +44,12 @@
             &noscript=1”/>
         </noscript>
         <!-- End Facebook Pixel Code -->
+
+           <script type=“text/javascript”> //<![CDATA[ 
+        var tlJsHost = ((window.location.protocol == “https:“) ? “https://secure.comodo.com/” : “http://www.trustlogo.com/“);
+        document.write(unescape(“%3Cscript src=‘” + tlJsHost + “trustlogo/javascript/trustlogo.js’ type=‘text/javascript’%3E%3C/script%3E”));
+        //]]>
+        </script>
 </head>
 <body class="container-fluid " style="padding: 0px;">
     {{-- BOTONES DE TIENDAS --}}
@@ -77,9 +83,20 @@
     </div>
     {{--FIN MENU --}}
 
+     @if($notificacion=Session::get('notificacion'))
+        <div class="col-12 d-flex justify-content-center" style="position: absolute; top: 3%; z-index: 9999">
+            <div class=" col-12 col-md-6 alert alert-success alert-dismissible fade show" role="alert">
+              <strong>Envio Satisfactorio</strong> 
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+        </div>
+     @endif
+
     {{-- SLIDER --}}
     {{-- PARA ASEGURAR EL AJUSTE DE LA IMAGENES VERIFIQUE QUE LAS IMAGENES POSEAN LAS MISMAS DIMENCIONES 1920 × 1279/ PUEDE AYUDARSE EMPLEADO EL ARCHIVO .PSD QUE SE ENCUENTRA EN PUBLIC/ASSETS/IMG.PSD --}}
-    <div id="carouselExampleSlidesOnly" class="carousel slide row-masthead" data-ride="carousel">
+    <div id="carouselExampleSlidesOnly" class="carousel slide row-masthead col-12 p-0" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active" >
               <div class="position-absolute col-12 col-md-8 col-lg-6 p-5  p-1-sm ml-5 c-white background-black top-30 text-center invisible-xs">
@@ -125,21 +142,31 @@
     <div class="row-footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-12 col-md-6">
                     2018 © Phonealo - ALL Rights Reserved.
                     <br>
                     B-Duc Mircea Cel Batran H5, Targoviste, Romania
                 </div>
-                <div class="col-md-5 col-md-offset-1 col-sm-6">
-                    <div class="row d-flex justify-content-end ">
+                <div class="col-12 mt-3-xs col-md-5 col-md-offset-1 col-sm-6">
+                    <div class="row d-flex justify-content-center justify-content-sm-end ">
                         <div class="col-2">
                             <a target="blank_" href="https://www.instagram.com/phonealo_app/" title="Instagram">
-                                <img src="{{ asset('assets/ig.svg') }}" alt="">
+                                <img src="{{ asset('assets/ig_circle.svg') }}" alt="">
                             </a>
                         </div>
                         <div class="col-2">
                             <a target="blank_" href="https://www.facebook.com/Phonealo-642900916095975/?modal=admin_todo_tour" title="Facebook">
-                                <img src="{{ asset('assets/fb.svg') }}" alt="">
+                                <img src="{{ asset('assets/fb_circle.svg') }}" alt="">
+                            </a>
+                        </div>
+                        <div class="col-2">
+                            <a target="blank_" href="#">
+                                <img src="{{ asset('assets/tw_circle.svg') }}" alt="@Phonealo1">
+                            </a>
+                        </div>
+                        <div class="col-2">
+                            <a target="blank_" href="skype:phonealo app">
+                                <img src="{{ asset('assets/sk_circle.svg') }}" alt="">
                             </a>
                         </div>
                     </div>
@@ -151,6 +178,12 @@
     {{-- FIN FOOTER --}}
 
     <!--Scripts-->
+       <script language=“JavaScript” type=“text/javascript”>
+TrustLogo(“http://www.phonealo.com/comodo_secure_seal_76x26_transp.png
+http://www.phonealo.com/comodo_secure_seal_76x26_transp.png
+“, “CL1”, “none”);
+</script>
+<a  href=“https://www.positivessl.com/” id=“comodoTL”>Positive SSL</a>
     <script src="{{asset('js/jquery.min.js')}}"></script>
     <script src="{{asset('js/classie.js')}}"></script>
     <script src="{{asset('js/selectFx.js')}}"></script>

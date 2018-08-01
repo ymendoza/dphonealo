@@ -13,6 +13,10 @@
 
 Route::get('/', 'frontend\FrontendController@index');
 
+Route::get('exito', 'frontend\FrontendController@index')->name('exito');
+
 Route::post('recarga_submit', 'frontend\FrontendController@recarga');
+
+Route::post('contacto_submit', 'ContactoControler@contacto')->name('contacto_submit');
 
 Route::get('tarifas', 'frontend\FrontendController@tarifas');
