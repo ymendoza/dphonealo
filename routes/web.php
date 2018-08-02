@@ -20,3 +20,11 @@ Route::post('recarga_submit', 'frontend\FrontendController@recarga');
 Route::post('contacto_submit', 'ContactoControler@contacto')->name('contacto_submit');
 
 Route::get('tarifas', 'frontend\FrontendController@tarifas');
+
+// LANDING
+
+Route::get('ec', 'landingController@ecuador')->name('ec');
+Route::get('cu', 'landingController@cuba')->name('cu');
+
+Route::post('email_landing', 'landingController@email')->name('email_landing');
+Route::get('verifica_email', 'landingController@verifica')->name('verifica_email');
