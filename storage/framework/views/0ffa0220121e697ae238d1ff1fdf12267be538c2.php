@@ -43,6 +43,12 @@
             &noscript=1”/>
         </noscript>
         <!-- End Facebook Pixel Code -->
+
+           <script type=“text/javascript”> //<![CDATA[ 
+        var tlJsHost = ((window.location.protocol == “https:“) ? “https://secure.comodo.com/” : “http://www.trustlogo.com/“);
+        document.write(unescape(“%3Cscript src=‘” + tlJsHost + “trustlogo/javascript/trustlogo.js’ type=‘text/javascript’%3E%3C/script%3E”));
+        //]]>
+        </script>
 </head>
 <body class="container-fluid " style="padding: 0px;">
     
@@ -158,7 +164,7 @@
                             </a>
                         </div>
                         <div class="col-2">
-                            <a target="blank_" href="#">
+                            <a target="blank_" href="skype:phonealo app">
                                 <img src="<?php echo e(asset('assets/sk_circle.svg')); ?>" alt="">
                             </a>
                         </div>
@@ -171,6 +177,12 @@
     
 
     <!--Scripts-->
+       <script language=“JavaScript” type=“text/javascript”>
+TrustLogo(“http://www.phonealo.com/comodo_secure_seal_76x26_transp.png
+http://www.phonealo.com/comodo_secure_seal_76x26_transp.png
+“, “CL1”, “none”);
+</script>
+<a  href=“https://www.positivessl.com/” id=“comodoTL”>Positive SSL</a>
     <script src="<?php echo e(asset('js/jquery.min.js')); ?>"></script>
     <script src="<?php echo e(asset('js/classie.js')); ?>"></script>
     <script src="<?php echo e(asset('js/selectFx.js')); ?>"></script>
