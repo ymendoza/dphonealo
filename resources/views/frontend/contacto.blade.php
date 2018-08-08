@@ -10,11 +10,11 @@
                         <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}">
                         <div class="form-group">
                             <label class="label-text" for="email">Email</label>
-                            <input type="email" class="col-md-12 form-control email" id="email" name="email" required placeholder="Ingresa tu Email">
+                            <input type="email" class="col-md-12 form-control email" id="email" name="email" required placeholder="Tu Email">
                         </div>
                         <div class="form-group">
                             <label class="label-text" for="tel">Teléfono</label>
-                            <input type="text" class="col-md-12 form-control email" id="tel" name="tel" required placeholder="Número Teléfonico">
+                            <input type="text" class="col-md-12 form-control email" id="tel" name="tel" required placeholder="Tu Telefono">
                         </div>
                         <div class="form-group">
                             <label class="label-text" for="mensaje">Mensaje</label>
