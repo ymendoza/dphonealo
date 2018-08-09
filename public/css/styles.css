@@ -6,7 +6,6 @@ body, html {
     font-family: 'Open Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    height: 100%;
 }
 /*Tiendas*/
 #btn-tiendas{
@@ -24,7 +23,7 @@ body, html {
 /*menu*/
 #menu{
    top: 0px;
-   z-index: 9; 
+   z-index: 1; 
 }
 .background-white{
     background-color: rgba(255,255,255,.8);
@@ -49,7 +48,6 @@ body, html {
 
 /*///////////////////////////////*//*Row Styles*/
 .row-masthead {
-
     position: fixed; 
     z-index: -2;
 }
@@ -332,9 +330,10 @@ input.email, textarea.mensaje {
 }
 
 .iPhone {
-    z-index: 1;
+    height: auto;
     position: relative;
-    top: 25%;
+    right: 70px;
+    top: 110px;
 }
 .padding-200{
     padding: 220px 0px;
@@ -503,10 +502,6 @@ input.input:focus{
 
 @media only screen and (max-width: 639px) {
 
-    .relleno{
-        height: auto !important;
-    }
-
 
     .position-absolute-xs{
         position: absolute !important;
@@ -533,8 +528,8 @@ input.input:focus{
 
     .logo {
         padding: 20px;
-        top: 0px; 
-        left: 0px
+       top: 0px; 
+       left: 0px
     }
 
     .padding-200{
@@ -584,11 +579,11 @@ input.input:focus{
         top: 70px;
     }
     .invisible-xs {
-        visibility: hidden;
+      visibility: hidden;
      /* display: none;*/
     }
     .pt-xs-0{
-        padding-top: 0;
+    padding-top: 0;
     }
     .pt-xs-1{
         padding-top: 1em !important;
@@ -607,92 +602,61 @@ input.input:focus{
     .row-buying{
         padding: 40px 10px 20px 10px;
     }
-    
 
 }
 
-@media only screen and (min-width: 640px) and (max-width: 768px) {
-    .top-30{
-        top: 15%;
-    }
-    .p-1-sm{
-        padding: 1em !important;
-    }
-    .size-1{
-        font-size: 1rem;
-    }
-    .size-13{
-        font-size: 1.3rem;
-    }
+@media only screen and (min-width: 640px) and (max-width: 767px) {
+.top-30{
+    top: 15%;
+}
+.p-1-sm{
+    padding: 1em !important;
+}
+.size-1{
+    font-size: 1rem;
+}
+.size-13{
+    font-size: 1.3rem;
+}
     .iPhone {
         height: 250px;
         top: 40px;
     }
     .cs-skin-overlay .cs-options > ul {
-        top: inherit !important;
-        left:  inherit !important;
-        width: inherit  !important;
-        -webkit-transform: inherit !important;
-        transform: inherit !important;
+    
+    top: inherit !important;
+    left:  inherit !important;
+    width: inherit  !important;
+    -webkit-transform: inherit !important;
+    transform: inherit !important;
     }
     .size-burbuja{
         font-size: 1rem;
         margin-bottom: 0px;
     }
-    .w-80{
+     .w-80{
         width: 70%;
     }
      .row-buying .active, .row-buying .inactive  {
         padding: 20px !important;
     }
+
     .row-buying{
         padding: 40px 10px 40px 10px;
     }
-    .content{
-        margin-top: 250px;
+  .content{
+        margin-top: 340px;
     }
-  .d-none{
-        display: none;
-    }
-      .relleno{
-        height: auto !important;
-    }
-
 
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
 
      .iPhone {
-        top: 20%;
+        height: 500px;
+        right: 0px;
+        top: 120px;
     }
-      .relleno{
-        height: auto !important;
-    }
-
-
    
 
 }
-@media only screen and (min-width: 1024px) and (max-width: 1499px) {
-
-     .iPhone {
-        top: 20%;
-    }
-
-
-  
-
-}
-
-@media only screen and (min-width: 1500px){
-   .iPhone {
-
-        top: 65%;
-
-    }
-    
-}
-.relleno{
-        height: 100%;
-    }

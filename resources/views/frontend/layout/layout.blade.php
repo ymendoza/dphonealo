@@ -5,8 +5,6 @@
     <title>@yield('title')</title>
         <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}" >
         <link rel="stylesheet" href="{{asset('css/styles.css')}}" >
-       {{--  <link rel="stylesheet" href="{{asset('css/cs-select.css')}}" >
-        <link rel="stylesheet" href="{{asset('css/cs-skin-overlay.css')}}" > --}}
         <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700' rel='stylesheet' type='text/css'>
         <meta name="description" content="">
@@ -67,48 +65,46 @@
             </div>
         </div> 
     </div>
+    {{--FIN BOTONES DE TIENDAS --}}
 
-   <div id="btn-redes" class="col-1  position-fixed d-md-block d-none">
+     <div id="btn-redes" class="col-1  position-fixed d-md-block d-none">
         <div class="row d-flex justify-content-right align-items-center">
             <div class="col pt-1 text-right">
                 <a target="blank_" href="https://www.instagram.com/phonealo_app/" title="Instagram">
-                    <img src="{{ asset('assets/ig_circle.svg') }}" alt="" class="w-25">
+                    <img src="http://localhost/dphonealo/public/assets/ig_circle.svg" alt="" class="w-25">
                 </a>
             </div>
             <div class="w-100"></div>
             
             <div class="col pt-1 text-right">
                 <a target="blank_" href="https://www.facebook.com/Phonealo-642900916095975/?modal=admin_todo_tour" title="Facebook">
-                     <img src="{{ asset('assets/fb_circle.svg') }}" alt=""  class="w-25">
+                     <img src="http://localhost/dphonealo/public/assets/fb_circle.svg" alt=""  class="w-25">
 
                 </a>
             </div>
          <div class="w-100"></div>
              <div class="col pt-1 text-right">
                 <a href="" title="">
-                     <img src="{{ asset('assets/tw_circle.svg') }}" alt="@Phonealo1" class="w-25"> 
+                     <img src="http://localhost/dphonealo/public/assets/tw_circle.svg" alt="@Phonealo1" class="w-25"> 
 
                 </a>
             </div>
          <div class="w-100"></div>
              <div class="col pt-1 text-right">
                 <a target="blank_" href="skype:phonealo app">
-                     <img src="{{ asset('assets/sk_circle.svg') }}" alt=""  class="w-25">
+                     <img src="http://localhost/dphonealo/public/assets/sk_circle.svg" alt=""  class="w-25">
 
                 </a>
             </div>
         <div class="w-100"></div>
              <div class="col pt-1 text-right">
                 <a target="blank_" href="">
-                     <img src="{{ asset('assets/tg_circle.png') }}" alt=""  class="w-25">
+                     <img src="http://localhost/dphonealo/public/assets/tg_circle.png" alt=""  class="w-25">
 
                 </a>
             </div>
         </div> 
     </div>
-
-
-    {{--FIN BOTONES DE TIENDAS --}}
 
     {{-- MENU --}}
     <div id="menu" class="col-12 position-fixed position-absolute-xs" >   
@@ -118,11 +114,13 @@
             </div>
             <div class="col-12 col-sm-auto pb-1-xs pr-5 p-0-xs text-center">
                 {{-- <a href="" title="">ES</a> | <a href="" title="">EN</a>  --}}
-                <a href="https://app.phonealo.net//balance" title="Ingresa">Ingresa</a>
+                <a href="https://app.phonealo.net//balance" title="Ingresa">Tu Phonealo</a>
             </div> 
         </div> 
     </div>
     {{--FIN MENU --}}
+
+
 
      @if($notificacion=Session::get('notificacion'))
         <div class="col-12 d-flex justify-content-center" style="position: absolute; top: 3%; z-index: 9999">
@@ -140,21 +138,21 @@
     <div id="carouselExampleSlidesOnly" class="carousel slide row-masthead col-12 p-0" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active" >
-              <div class="position-absolute col-12 col-md-8 col-sm-8 col-lg-6 p-5  p-1-sm ml-5 c-white background-black top-30 text-center invisible-xs">
+              <div class="position-absolute col-12 col-md-8 col-lg-6 p-5  p-1-sm ml-5 c-white background-black top-30 text-center invisible-xs">
                   <h2 class="c-white size-13" >Descarga nuestra aplicación</h2>
                   <h3 class="c-white normal size-1" >Nuestro compromiso siempre es conseguir la mejor calidad al mejor precio</h3>
               </div>  
               <img class="d-block w-100" src="{{asset('assets/usa.png')}}" alt="">
             </div>
             <div class="carousel-item">
-                <div class="position-absolute col-12 col-md-8 col-sm-8 m-auto-sm col-lg-6 p-5 p-1-sm ml-5 c-white background-black top-30 text-center invisible-xs">
+                <div class="position-absolute col-12 col-md-8 col-lg-6 p-5 p-1-sm ml-5 c-white background-black top-30 text-center invisible-xs">
                     <h2 class="c-white size-13 ">Llamadas internacionales</h2>  
                     <h3 class="c-white normal size-1" >Phonealo utiliza la tecnología más innovadora para que puedas llamar en el extranjero</h3>
                 </div>
               <img class="d-block w-100" src="{{asset('assets/ecuador.jpg')}}" alt="">
             </div>
             <div class="carousel-item">
-                <div class="position-absolute col-12 col-md-8 col-sm-8 m-auto-sm col-lg-6 p-5 p-1-sm ml-5 c-white background-black top-30 text-center invisible-xs">
+                <div class="position-absolute col-12 col-md-8 col-lg-6 p-5 p-1-sm ml-5 c-white background-black top-30 text-center invisible-xs">
                   <h2 class="c-white size-13 ">Chatea y Cuéntaselo todo</h2>
                   <h3 class="c-white normal  size-1">Hasta el último detalle con la gente que te importa.</h3>
               </div>
@@ -164,12 +162,12 @@
     </div>
     {{-- FIN SLIDER --}}
     {{-- IPHONE --}}
-    <div class="container relleno">
+    <div class="container">
         <div class="row">
-            <div class="col-md-6 col-sm-12 col-lg-6">
+            <div class="col-md-9 col-sm-12 col-lg-6">
             </div>
-            <div class="col-md-6 d-md-block d-none">
-                <img src="assets/iPhone1.png" class="iPhone img-fluid"/>
+            <div class="col-md-2 d-md-block d-none">
+                <img src="assets/iPhone1.png" class="iPhone"/>
             </div>
         </div>
     </div>
@@ -212,12 +210,11 @@
                                 <img src="{{ asset('assets/sk_circle.svg') }}" alt="">
                             </a>
                         </div>
-                        <div class="col-2">
+                         <div class="col-2">
                             <a target="blank_" href="">
-                                <img src="{{ asset('assets/tg_circle.png') }}" alt=""  class="img-fluid">
+                                <img src="http://localhost/dphonealo/public/assets/tg_circle.png" alt=""  class="img-fluid">
                             </a>
                         </div>
-                        
                     </div>
                     
                 </div>
@@ -234,8 +231,6 @@ http://www.phonealo.com/comodo_secure_seal_76x26_transp.png
 </script>
 <a  href=“https://www.positivessl.com/” id=“comodoTL”></a>
     <script src="{{asset('js/jquery.min.js')}}"></script>
-    <script src="{{asset('js/classie.js')}}"></script>
-    <script src="{{asset('js/selectFx.js')}}"></script>
     <script src="{{asset('js/parallax.min.js')}}"></script>
     <script src="{{asset('js/bootstrap.js')}}"></script>
 
