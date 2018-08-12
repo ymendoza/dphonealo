@@ -78,28 +78,28 @@
             
             <div class="col pt-1 text-right">
                 <a target="blank_" href="https://www.facebook.com/Phonealo-642900916095975/?modal=admin_todo_tour" title="Facebook">
-                     <img src="http://localhost/dphonealo/public/assets/fb_circle.svg" alt=""  class="w-25">
+                     <img src="{{ asset('assets/fb_circle.svg') }}" alt=""  class="w-25">
 
                 </a>
             </div>
          <div class="w-100"></div>
              <div class="col pt-1 text-right">
                 <a href="" title="">
-                     <img src="http://localhost/dphonealo/public/assets/tw_circle.svg" alt="@Phonealo1" class="w-25"> 
+                     <img src="{{ asset('assets/tw_circle.svg') }}" alt="@Phonealo1" class="w-25"> 
 
                 </a>
             </div>
          <div class="w-100"></div>
              <div class="col pt-1 text-right">
                 <a target="blank_" href="skype:phonealo app">
-                     <img src="http://localhost/dphonealo/public/assets/sk_circle.svg" alt=""  class="w-25">
+                     <img src=" {{ asset('assets/sk_circle.svg') }} " alt=""  class="w-25">
 
                 </a>
             </div>
         <div class="w-100"></div>
              <div class="col pt-1 text-right">
-                <a target="blank_" href="">
-                     <img src="http://localhost/dphonealo/public/assets/tg_circle.png" alt=""  class="w-25">
+                <a target="blank_" href="https://t.me/phonealo">
+                     <img src="{{ asset('assets/tg_circle.png') }}" alt=""  class="w-25">
 
                 </a>
             </div>
@@ -211,8 +211,8 @@
                             </a>
                         </div>
                          <div class="col-2">
-                            <a target="blank_" href="">
-                                <img src="http://localhost/dphonealo/public/assets/tg_circle.png" alt=""  class="img-fluid">
+                            <a target="blank_" href="https://t.me/phonealo">
+                                <img src="{{ asset('assets/tg_circle.png') }}" alt=""  class="img-fluid">
                             </a>
                         </div>
                     </div>
